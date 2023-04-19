@@ -1,0 +1,31 @@
+//구구단 1-9단까지 출력하고 그 외는 오류 뱉는 함수
+package prac;
+import java.util.*;
+public class gugudandan {
+   	public void gugudan(int user_input) {
+		if(user_input > 0 && user_input <10) {
+			for(int i=1;i<10;i++) {
+				System.out.println(user_input*i);
+			}
+		}else {
+			System.out.println("1-9단까지만 출력할 수 있습니다");
+		}
+	}
+			}
+//유저에게 원하는 구구단을 입력받는 코드
+package prac;
+
+import java.util.*;
+import prac.gugudandan;
+public class User_Input_Function {
+
+	public static void main(String[] args) {
+		gugudandan gugudan = new gugudandan();
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("출력을 원하는 구구단을 입력해주세요");
+		int user_input = scanner.nextInt();
+        gugudan.gugudan(user_input);
+        scanner.close();
+	}
+
+}
